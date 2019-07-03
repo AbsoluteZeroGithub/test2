@@ -1,0 +1,71 @@
+.title{
+    font-size: 14px;
+    color: #8f8f94;
+}
+.mui-content{
+    background-color: #fff!important;
+}
+.title .current{
+    color: #ff3300;
+}
+.title .old{
+    text-decoration: line-through;
+}
+.title .num{
+    font-size: 14px;
+    color: #8f8f94;
+}
+.sum{
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px;
+}
+.size{
+    padding: 10px;
+    font-size: 14px;
+}
+.editSize span{
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    margin: 0 5px 5px 5px;
+    border: 1px solid #ccc;
+    text-align: center;
+    background-color: #fff;
+}
+.editSize .active{
+    background-color: #fa672d;
+    color: #fff;
+    
+}
+.number{
+    padding: 10px 40px;
+    font-size: 14px;
+    line-height: 40px;
+    overflow: hidden;
+}
+.number #down,#up{
+    float: left;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    border: 1px solid #ccc;
+    margin: 0;
+}
+.number .fl{
+    float: left;
+}
+.number input{
+    float: left;
+    width: 28px;
+    height: 28px;
+    line-height: normal;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    text-align: center;
+}

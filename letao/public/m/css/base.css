@@ -1,0 +1,106 @@
+/* 公共样式 */
+*{
+  touch-action: pan-y;
+  margin: 0;
+  padding: 0;
+}
+ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+img{
+  width: 100%;
+  vertical-align: top;
+}
+body{
+  background-color: rgb(255, 255, 255)!important;
+}
+.my-header {
+	background: #006699;
+}
+
+header h1 {
+	color: #FFF!important;
+}
+
+header .mui-icon {
+	color: #FFF;
+}
+
+.my-footer, nav,header{
+	background: #006699!important;
+}
+
+nav.mui-bar .mui-tab-item {
+	color: #FFF;
+}
+.mui-active {
+	color: darkorange!important;
+}
+.content{
+  padding: 0 10px;
+  width: 100%;
+}
+.nav-link{
+  overflow: hidden;
+  padding: 10px 0;
+}
+.nav-link a{
+  display: block;
+  float: left;
+  width: 33.33%;
+}
+#brand-title{
+  width: 100%;
+}
+.brand a{
+  display: block;
+  float: left;
+  width: 25%;
+}
+.item:last-child{
+  margin-bottom: 50px;
+}
+.item ul{
+  padding: 10px 0;
+  overflow: hidden;
+}
+.item>img{
+  margin: 10px 0 0;
+}
+.item li{
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+.item li a{
+  display: block;
+  padding: 0 5px;
+  box-shadow: 0 0 5px #ccc;
+  text-align: center;
+}
+.item li a>span{
+  color: #8f8f94;
+  display: block;
+  height: 43px;
+  line-height: 16px;
+  padding: 10px; 
+  font-size: 14px;
+  overflow: hidden;
+}
+
+.item li a p span:first-child{
+  margin-right: 5px;
+  color: #f30;
+}
+.item li a p span:last-child{
+  color: #ccc;
+  text-decoration: line-through;
+}
+.buy-now{
+  margin-bottom: 10px;
+  background: #006699;
+  color: #fff;
+  border-radius: 5px;
+}

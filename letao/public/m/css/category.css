@@ -1,0 +1,42 @@
+.my-content{
+   position: absolute;
+   left:0;
+   top:44px;
+   bottom:50px;
+   width: 100%;
+}
+.nav-left,.nav-right{
+    position: relative;
+    height: 100%;
+}
+.nav-left{
+   
+    float: left;
+    width: 80px;
+}
+.nav-right{
+    margin-left: 90px;
+}
+.nav-left a{
+    display: block;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    color: #000;
+    border-bottom: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+}
+.nav-left .active{
+    border-right: 1px solid transparent;
+}
+.nav-right a{
+    float: left;
+    width: 33.33%;
+}
+.nav-right p{
+    text-align: center;
+}
+.nav-right span{
+    font-size: 16px;
+    color: rgb(209, 64, 54);
+}

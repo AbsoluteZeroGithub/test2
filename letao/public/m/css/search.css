@@ -1,0 +1,34 @@
+#search-content{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.search{
+    position: relative;
+    border: 1px solid #006699;
+    height: 30px;
+    margin: 10px auto;
+}
+.search input[type='text']{
+    padding: 0 10px;
+    height: 28px;
+    border:none;
+
+}
+.search input[type='button']{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 60px;
+    height: 28px;
+    line-height: 17px;
+    text-align: center;
+    background-color: #006699;
+    color: #fff;
+}
+.history-top{
+    height: 24px;
+    line-height: 24px;
+    font-style: 14px;
+    color: #8f8f94;
+    margin: 10px 0;
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="assets/mui/css/iconfont.css">
+    <link rel="stylesheet" href="assets/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <script src="assets/zepto/zepto.min.js"></script>
+    <script src="assets/mui/js/mui.min.js"></script>
+    <script src="assets/artTemplate/template-native.js"></script>
+    <script src="js/public.js"></script>
+    <script src="js/cart.js"></script>
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <h1 class="mui-title">商品详情</h1>
+    </header>
+    <nav class="mui-bar mui-bar-tab footer">
+        <a class="mui-tab-item" href="index.html">
+            <span class="mui-icon mui-icon-home"></span>
+            <span class="mui-tab-label">首页</span>
+        </a>
+        <a class="mui-tab-item" href="category.html">
+            <span class="mui-icon mui-icon-bars"></span>
+            <span class="mui-tab-label">分类</span>
+        </a>
+        <a class="mui-tab-item" href="cart.html">
+            <span class="mui-icon iconfont icon-gouwuche"></span>
+            <span class="mui-tab-label">购物车</span>
+        </a>
+        <a class="mui-tab-item" href="user.html">
+            <span class="mui-icon mui-icon-person"></span>
+            <span class="mui-tab-label">会员中心</span>
+        </a>
+    </nav>
+    <div class="mui-content">
+        <ul class="mui-table-view">
+            <!-- <li class="mui-table-view-cell mui-media">
+                <div class="mui-slider-right mui-disabled">
+                    <a class="mui-btn mui-btn-primary edit" href="javascript:;" data-id="<%= list[i].id %>">编辑</a>
+                    <span class="mui-btn mui-btn-red deleteAdress" data-id="<%= list[i].id %>">删除</span>
+                </div>
+                <a href="javascript:;" class="mui-slider-handle">
+                    <img class="mui-media-object mui-pull-left" src="images/banner1.png">
+                    <div class="mui-media-body title">
+                        <p> 能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+                        <div class='mui-ellipsis'>
+                            <div class="mui-row">
+                                <div class="mui-col-sm-6">
+                                    <input type="checkbox">
+                                    <span class="current">￥488</span>
+                                    <span class="old">￥688</span>
+                                </div>
+                                <div class="mui-col-sm-4">
+                                    <span class="size">鞋码 : </span>
+                                </div>
+                                <div class="mui-col-sm-2">
+                                    <span class="num mui-icon mui-icon-closeempty">2双</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li> -->
+        </ul>
+        <div class="sum">
+            订单总额：￥<span class="money"></span>
+        </div>
+    </div>
+</body>
+<script type="text/template" id="detailTpl">
+   <% for(var i=0;i<list.length;i++){ %>
+        <li class="mui-table-view-cell mui-media">
+                <div class="mui-slider-right mui-disabled">
+                    <a class="mui-btn mui-btn-primary edit" href="javascript:;" data-id="<%= list[i].id %>">编辑</a>
+                    <span class="mui-btn mui-btn-red delete" data-id="<%= list[i].id %>">删除</span>
+                </div>
+                <a href="javascript:;" class="mui-slider-handle">
+                    <img class="mui-media-object mui-pull-left" src="<%= list[i].pic[0].picAddr %>">
+                    <div class="mui-media-body title">
+                        <p> <%= list[i].proName %></p>
+                        <div class='mui-ellipsis'>
+                            <div class="mui-row">
+                                <div class="mui-col-sm-6">
+                                    <input type="checkbox">
+                                    ￥<span class="current"><%= list[i].price %></span>
+                                    ￥<span class="old"><%= list[i].oldPrice %></span>
+                                </div>
+                                <div class="mui-col-sm-4">
+                                        鞋码 : <span class="size"><%= list[i].size %></span>
+                                </div>
+                                <div class="mui-col-sm-2">
+                                    <span class="num mui-icon mui-icon-closeempty"><%= list[i].num %></span>双
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+   <% } %>
+</script>
+<!-- 弹窗界面魔板 -->
+<script type="text/template" id="editTpl">
+    <div class="editSize">
+        尺码：<% var sizes=productSize.split('-') %>
+         <% for(var i=sizes[0];i<=sizes[1];i++){ %>
+             <span class="<%=i==size?'active':'' %>"><%=i %></span>
+         <% } %>
+    </div>
+   <div class="number">
+        <span class="fl">数量：</span>
+          <span id="down">-</span> 
+          <input class="editNum" type="text" value="<%=num %>">
+          <span id="up">+</span>
+   </div> 
+</script>
+</html>
